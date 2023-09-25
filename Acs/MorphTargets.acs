@@ -1,0 +1,15 @@
+function void BlendFloor(int tag, int key, int speed) {
+	ScriptCall("MorphTarget","BlendFloor", tag, key, speed);
+}
+
+function void BlendFloorSync(int tag, int key, int speed) {
+	ScriptCall("MorphTarget","BlendFloorSync", tag, key, speed);
+}
+
+function void BlendCeil(int tag, int key, int speed) {
+	ScriptCall("MorphTarget","BlendCeil", tag, key, speed);
+}
+
+function void BlendCeilSync(int tag, int key, int speed) {
+	ScriptCall("MorphTarget","BlendCeilSync", tag, key, speed);
+}
