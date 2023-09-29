@@ -1,4 +1,4 @@
-class MorphTarget
+class MorphTarget play
 {
     const CEILING_KEY = "user_ceilingblend";
     const FLOOR_KEY = "user_floorblend";
@@ -11,8 +11,10 @@ class MorphTarget
         string blendkey = string.format("%s_%i", FLOOR_KEY, key); 
 
         SectorTagIterator it = Level.CreateSectorTagIterator(tag);
-        while ( index = it.next() )
+        while (  true )
         {
+			index = it.next();
+			console.printf("Tag: %i;", index);
             if (index < 0) break;
             sector sec = Level.Sectors[index];
             if (!sec) continue;
@@ -30,8 +32,10 @@ class MorphTarget
         int index;
         string blendkey = string.format("%s_%i", FLOOR_KEY, key); 
 
-        while ( index = it.next() )
+        while (  true )
         {
+			index = it.next();
+			console.printf("Tag: %i;", index);
             if (index < 0) break;
             sector sec = Level.Sectors[index];
             if (!sec) continue;
@@ -58,8 +62,10 @@ class MorphTarget
         string blendkey = string.format("%s_%i", CEILING_KEY, key); 
         SectorTagIterator it = Level.CreateSectorTagIterator(tag);
 
-        while ( index = it.next() )
+        while (  true )
         {
+			index = it.next();
+			console.printf("Tag: %i;", index);
             if (index < 0) break;
             sector sec = Level.Sectors[index];
             if (!sec) continue;
@@ -77,8 +83,10 @@ class MorphTarget
         string blendkey = string.format("%s_%i", CEILING_KEY, key); 
         SectorTagIterator it = Level.CreateSectorTagIterator(tag);
 
-        while ( index = it.next() )
+        while (  true )
         {
+			index = it.next();
+			console.printf("Tag: %i;", index);
             if (index < 0) break;
             sector sec = Level.Sectors[index];
             if (!sec) continue;
@@ -94,8 +102,8 @@ class MorphTarget
 
     static void BlendSec (int tag, int key, int speed = 16)
     {
-        SunsetLevelThinker.BlendFloor(tag,key,speed);
-        SunsetLevelThinker.BlendCeil(tag,key,speed);
+        MorphTarget.BlendFloor(tag,key,speed);
+        MorphTarget.BlendCeil(tag,key,speed);
     }
     
     static void BlendSecSync (int tag, int key, int speed = 16)

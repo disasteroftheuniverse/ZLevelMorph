@@ -1,3 +1,6 @@
+#include "Zcommon.acs"
+
+
 function void BlendFloor(int tag, int key, int speed) {
 	ScriptCall("MorphTarget","BlendFloor", tag, key, speed);
 }
@@ -12,4 +15,18 @@ function void BlendCeil(int tag, int key, int speed) {
 
 function void BlendCeilSync(int tag, int key, int speed) {
 	ScriptCall("MorphTarget","BlendCeilSync", tag, key, speed);
+}
+
+function void BlendSec(int tag, int key, int speed) {
+	ScriptCall("MorphTarget","BlendSec", tag, key, speed);
+}
+
+function void BlendSecSync(int tag, int key, int speed) {
+	ScriptCall("MorphTarget","BlendSecSync", tag, key, speed);
+}
+
+
+script "morph" (int tag, int key, int speed)
+{
+	BlendSecSync(tag, key, speed);
 }
