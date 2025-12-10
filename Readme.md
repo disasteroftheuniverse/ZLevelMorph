@@ -6,10 +6,12 @@
 /____/_/  /_/\____/_/  / .___/_/ /_/_/  \__,_/_/   \__, /\___/\__/____/  
                       /_/                         /____/                 
 </pre>
+# ZMorphtargets
+Interpolate between multiple predefined floor and ceiling states in your [GZDoom/UZDoom mods](https://zdoom.org/index). Works similarly to blend shapes or morph targets common to 3D software like Maya or 3DS Max. This includes a plugin for [Ultimate Doom Builder](https://ultimatedoombuilder.github.io/), a script for your ZDoom project and a working example mod.
 
 ## Installation
 
-Put BlendTargets.js in your UDB scripts folder.
+Put BlendTargets.js in your UDB scripts folder. Include MorphTargets.zs somwhere in your zdoom zscript.
 
 ## Usage
 
